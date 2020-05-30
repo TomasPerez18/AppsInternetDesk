@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="css/stylechatapp.css">
+    <link rel="stylesheet" href="css/conversacion.css">
+   <!-- <script src='https://kit.fontawesome.com/a076d05399.js'></script> -->    
+
+    <!--Boosttrap para darle estilo-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
+
+    
+    <script src="js/scriptchatapp.js"></script>
+</head>
+<body>
+
+    <div class="header">
+        <div id="appname" class="appname">Chatapp</div>
+        <div class="space"></div>
+        <div class="search"><i class="glyphicon glyphicon-search"></i></div>
+        <div class="submenu"><i class="glyphicon glyphicon-option-vertical"></i></div>
+    </div>
+
+    <div class="menu">
+        <div class="camara"><i class="glyphicon glyphicon-camera"></i></div>
+        <div id="bottom-line" class="chats" data-view="chats">CHATS</div>
+        <div id="bottom-line" class="estados" data-view="estados">ESTADOS</div>
+        <div id="bottom-line" class="llamadas"  data-view="llamadas">LLAMADAS</div>
+    </div>
+    <div id="tabs" data-view="chats" class="vchats">
+        <div class="tabchats">
+        </div>
+    </div>
+    <div id="tabs" style="display: none;" data-view="estados" class="vestados">
+        <div class="tabestados">
+            <div class="miestado">
+                <div class="row">
+                    <div class="icon myicon">
+                        <img src="images/micro.png" alt="Avatar" height="30px" width="30px" srcset="">
+                    </div>
+                    <div class="content">
+                        <div class="top-row">
+                            <div class="chatname">Mi estado</div>
+                        </div>
+                        <div class="bottom-row">
+                            <div class="contactname">Agregar actualización</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="separadores">
+                <h5>Recientes</h5>
+            </div>
+            <div class="tabestadosrecientes">
+                <div class="row">
+                    <div class="icon">
+                        <img src="images/btnstatus.png" alt="Avatar" height="30px" width="30px" srcset="">
+                    </div>
+                    <div class="content">
+                        <div class="top-row">
+                            <div class="statename">Alfonso</div>
+                        </div>
+                        <div class="bottom-row">
+                            <div class="statetime">hace 23 minutos</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="icon">
+                        <img src="images/btnstatus.png" alt="Avatar"       height="30px" width="30px" srcset="">
+                    </div>
+                    <div class="content">
+                        <div class="top-row">
+                            <div class="statename">Daniel</div>
+                        </div>
+                        <div class="bottom-row">
+                            <div class="statetime">Hoy 1:13 p.m.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="separadores">
+                <h5>Vistos</h5>
+            </div>
+            <div class="tabestadosvistos">
+                <div class="row">
+                    <div class="icon">
+                        <img src="images/btnstatus.png" alt="Avatar"       height="30px" width="30px" srcset="">
+                    </div>
+                    <div class="content">
+                        <div class="top-row">
+                            <div class="statename">Primo</div>
+                        </div>
+                        <div class="bottom-row">
+                            <div class="statetime">Hoy 10:15 a.m.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tabs" style="display: none;" data-view="llamadas" class="vllamadas">
+        <div class="tabllamadas">
+            <div class="row">
+                <div class="iconllamada">
+                    <img src="images/tel.jpg" alt="Avatar"      height="30px" width="30px" srcset="">
+                </div>
+                <div class="contentllamada">
+                    <div class="content1">
+                        <div class="top-row">
+                            <div class="chatname">Carlos</div>
+                        </div>
+                        <div class="bottom-row">
+                            <div class="contactname">15 de mayo 7:43 p.m.</div>
+                        </div>
+                    </div>
+                    <div class="content2">
+                        <div class="iconcall">
+                            <i class="glyphicon glyphicon-earphone"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Pantalla conversaciones-->
+    <div class="headerc" style="display: none;">
+        <div class="back"><a href="index.html"><i class="glyphicon glyphicon-backward"></i></a></div>
+        <div class="icono"><img src="images/micro.png" alt="micro" height="30px" width="30px" srcset=""></div>
+        <div class="contacto">Contacto</div>
+        <div class="espacio"></div>
+        <div class="videocall"><i class="glyphicon glyphicon-facetime-video"></i></div>
+        <div class="call"><i class="glyphicon glyphicon-earphone"></i></div>
+        <div class="submenuc"><i class="glyphicon glyphicon-option-vertical"></i></div>
+    </div>
+    <div class="conversacion" style="display: none;">
+        <div class="rowc">
+        </div>
+    </div>
+    <div class="inputtext" style="display: none;">
+        <div class="inputtext1">
+            <div class="emoji"><i class='far fa-grin'></i></div>
+            <div class="entrada">
+                <input id="mensaje" class="form-control inputentrada" name="mensaje" type="text" placeholder="Escribe un mensaje">
+            </div>
+            <div id="send" class="send"><i class="glyphicon glyphicon-send"></i></div>
+            <div class="archivo"><i class="glyphicon glyphicon-paperclip"></i></div>
+            <div class="foto"><i class="glyphicon glyphicon-camera"></i></div>
+        </div>
+        <div class="inputtext2">
+            <div class="microfono"><i class="glyphicon glyphicon-upload"></i></div>
+        </div>
+    </div>
+</body>
+</html>

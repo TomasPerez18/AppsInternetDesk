@@ -1,0 +1,154 @@
+/*
+    Autor: Manuel Alejandro Gomez Vazquez
+    Universad Interamericana Para El Desarrollo
+    Materia: Aplicaciones Moviles para internet
+    Profesor: Jesus Alberto Revilla Silva
+    Sesion 1, 2, 3, 4
+    Aplicacion Chat (Whatsapp clon)
+*/
+
+/*estilos para la pantalla del chat*/
+.headerc {
+    display: flex;
+    background-color: green;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: sticky;
+    top: 0;
+}
+
+.back{
+    flex: 1 1 auto;
+    padding-left: 0px;
+}
+
+.icono{
+    flex: 1 1 auto;
+}
+
+.contacto{
+    flex: 5 1 auto;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.espacio{
+    flex: 6 1 auto;
+}
+
+.videocall{
+    flex: 1 1 auto;
+}
+
+.call{
+    flex: 1 1 auto;
+}
+
+.submenuc{
+    flex: 1 1 auto;
+    padding-right: 10px;
+}
+
+.rowc{
+    display: flex;
+    flex-direction: column;
+}
+
+.row1, .row2, .row3{
+    flex: 1 1 auto;
+}
+
+.back, .videocall, .call, .submenuc{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.conversacion{
+    align-items: center;
+    height: 79vh;
+    overflow: scroll;
+}
+
+.mensajeremitente, .mensajeemisor, .fecha{
+    width: 50%;
+    border-radius: 10px;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 10px;
+}
+
+.fecha{
+    background-color: aquamarine;
+    width: 120px;
+    height: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.mensajeremitente{
+    background-color: lightgray;
+}
+
+.mensajeemisor{
+    float: right;
+    background-color: greenyellow;
+}
+
+.hora{
+    text-align: right;
+}
+
+.inputtext{
+    display: flex;
+    width: 100%;
+    position: sticky;
+    position: fixed;
+    bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.inputtext1{
+    flex: 6 1 auto;
+    display: flex;
+    border-radius: 195px;
+    background-color: lightgray;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.emoji, .archivo, .foto, .send{
+    flex: 1 1 auto;
+    padding: 2px;
+    margin: 5px;
+    padding-top: 5px;
+}
+
+.entrada{
+    flex: 6 1 auto;
+    width: 95%;
+    padding: 2px;
+}
+
+.inputtext2{
+    flex: 1 1 auto;
+    background-color: green;
+    border-radius: 100px;
+    width: 40px;
+    text-align: center;
+    padding-top: 10px;
+    margin-right: 5px;
+}
+
+#editarmensaje{
+    border: 1px solid black;
+}
+
+.glyphicon-pencil, .glyphicon-trash {
+    padding: 2px;
+    margin: 2px;
+}

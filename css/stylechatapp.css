@@ -1,0 +1,175 @@
+/*
+    Autor: Manuel Alejandro Gomez Vazquez
+    Universad Interamericana Para El Desarrollo
+    Materia: Aplicaciones Moviles para internet
+    Profesor: Jesus Alberto Revilla Silva
+    Sesion 1, 2, 3, 4
+    Aplicacion Chat (Whatsapp clon)
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: white;
+}
+
+h1 {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.header {
+    display: flex;
+    background-color: green;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: right;
+}
+
+.appname{
+    flex: 6 1 auto;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.space{
+    flex: 6 1 auto;
+}
+
+.search{
+    flex: 1 1 auto;
+}
+.submenu{
+    flex: 1 1 auto;
+    padding-right: 10px;
+}
+
+.menu {
+    display: flex;
+    background-color: green;
+    color: white;
+    justify-content: space-between;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+.camara {
+    flex: 1 1 auto;
+}
+
+.chats {
+    flex: 3 1 auto;
+    border-bottom: 3px solid white;
+    transition-duration: .5s;
+}
+
+.estados {
+    flex: 3 1 auto;
+    transition-duration: .5s;
+}
+
+.llamadas {
+    flex: 3 1 auto;
+    transition-duration: .5s;
+}
+
+.chats:hover, .estados:hover, .llamadas:hover {
+    background-color: lightgreen;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding-top: 10px;
+    transition-duration: .5s;
+}
+
+.row:hover {
+    background-color: lightgray;
+}
+
+.icon {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.content {
+    flex: 5 1 auto;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+}
+
+.top-row, .bottom-row {
+    display: flex;
+}
+
+.chatname, .contactname, .statename, .statetime {
+    flex: 5 1 auto;
+}
+
+.timedata {
+    flex: 1 1 auto;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.chatname, .statename {
+    font-weight: bold;
+}
+
+.status {
+    border: 1px solid green;
+    border-radius: 100px;
+    padding: 1px;
+    background-color: green;
+    color: white;
+    margin-right: 20px;
+    width: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.separadores {
+    background-color: lightgray;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+.tabestados .content {
+    border-bottom: none;
+}
+
+.iconllamada {
+    flex: 1 1 auto;
+    text-align: center;
+    padding-left: 5px;
+    margin-left: 5px;
+}
+
+.contentllamada {
+    flex: 6 1 auto;
+    display: flex;
+    border-bottom: 1px solid gray;
+}
+
+.content1 {
+    flex: 5 1 auto;
+    padding-right: 5px;
+}
+
+.content2 {
+    flex: 1 1 auto;
+    padding-right: 5px;
+    padding-top: 5px;
+}
